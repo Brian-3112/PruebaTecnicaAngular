@@ -100,14 +100,18 @@ export class Tareas implements OnInit {
       return;
     }
 
+
+    const maxId = this.tareas.length > 0 ? Math.max(...this.tareas.map(t => t.id)) : 0;
+    const nuevoId = maxId + 1;
+
     const nuevaTarea: Tarea = {
       ...tarea,
-      id: 0,
-      userId: this.idProyecto
+      userId: this.idProyecto,
+      id: nuevoId
     };
 
-    this.tareaService.CreateTarea(nuevaTarea).subscribe((creada: Tarea) => {
-      this.tareas.push(creada);
+    this.tareaService.CreateTarea(nuevaTarea).subscribe(() => {
+      this.tareas.push(nuevaTarea);
       this.modalVisible = false;
     });
   }
