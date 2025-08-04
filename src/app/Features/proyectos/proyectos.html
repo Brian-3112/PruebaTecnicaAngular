@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="divTitulo">
+
+
+
+    <app-modal-formulario [visible]="modalVisible" [titulo]="modoEdicion ? 'Editar Proyecto' : 'Agregar Proyecto'"
+      [modelo]="proyectoActual" (onGuardar)="guardarProyecto()" (onCerrar)="cerrarModal()"></app-modal-formulario>
+
+    <h2 class="titulo">PROYECTOS</h2>
+
+    <button (click)="abrirAgregar()" class="botonAgregar">Agregar Proyecto</button>
+
+    <button pButton type="button" icon="pi pi-sign-out" class="icon-button logout-button" pTooltip="Cerrar sesión"
+      tooltipPosition="top" (click)="cerrarSesion()"></button>
+  </div>
+
+  <div class="grid-container">
+    <p-card *ngFor="let proyecto of proyectos">
+      <div class="proyecto-id">{{ proyecto.id }}</div>
+
+
+      <ng-template #title>
+        <span class="titulo-username">{{ proyecto.username }}</span>
+      </ng-template>
+
+      <p class="descripcion">
+        {{ proyecto.name }}<br />
+        {{ proyecto.email }}<br />
+        {{ proyecto.address.city }}<br />
+      </p>
+
+      <ng-template #footer>
+        <div class="footer">
+
+          <button class="VerTareas" (click)="IrTareas(proyecto.id)">Ver Tareas</button>
+
+
+          <button (click)="abrirEditar(proyecto)" pButton type="button" icon="pi pi-pencil"
+            class="icon-button"></button>
+
+
+          <button pButton type="button" icon="pi pi-times" class="icon-button"
+            (click)="EliminarProyecto(proyecto.id)"></button>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+</div>

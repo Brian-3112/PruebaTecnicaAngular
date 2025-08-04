@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Knewave&family=Mogra&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+  padding-top: 1rem;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.divTitulo {
+  /* border: 2px solid black; */
+  position: relative;
+}
+
+.botonAgregar {
+  background-color: #182438;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-left: 170px;
+  /* border: 3px solid green; */
+}
+
+.botonAgregar:hover {
+  background-color: #202020;
+  transform: translateY(-2px);
+}
+
+
+.titulo {
+  text-align: center;
+  font-family: "Bree Serif", serif;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  font-size: 49px;
+  text-transform: uppercase;
+  /* border: 2px solid blue; */
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  /* border: 2px solid blue; */
+}
+
+:host ::ng-deep .p-card {
+  position: relative;
+  width: 340px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 2px solid blue; */
+}
+
+.proyecto-id {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  font-family: "Knewave", system-ui;
+  text-transform: uppercase;
+  /* border: 2px solid blue; */
+}
+
+.titulo-username {
+  display: block;
+  text-align: center;
+  font-family: "Tourney", sans-serif;
+  font-size: 25px;
+  color: #ffffff;
+  text-shadow: 1px 1px 9px #ffffff;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  /* border: 2px solid blue; */
+}
+
+.descripcion {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #e0e0e0;
+  margin-top: 2rem;
+  margin-left: 0.4rem;
+  text-align: center;
+  /* border: 2px solid red; */
+}
+
+
+.footer {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 0.1rem;
+  /* border: 2px solid red; */
+}
+
+
+
+.VerTareas {
+
+  background: none;
+  border: none;
+  color: white;
+  font-family: "Bree Serif", serif;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  position: relative;
+  right: 80px;
+}
+
+.VerTareas:hover {
+  color: #00e1ff;
+}
+
+
+:host ::ng-deep .icon-button.p-button {
+  background: transparent;
+  border: none;
+  position: relative;
+  left: 85px;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  /* border: 1px solid red; */
+
+}
+
+
+:host ::ng-deep .icon-button .pi {
+  color: white !important;
+  font-size: 1.1rem;
+  /* border: 1px solid red; */
+}
+
+
+:host ::ng-deep .icon-button.p-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+:host ::ng-deep .logout-button.p-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 25px;
+  left: 1230px;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+:host ::ng-deep .logout-button .pi {
+  color: black !important;
+  font-size: 1.4rem;
+}
+
+
+:host ::ng-deep .logout-button.p-button:hover {
+  background-color: rgba(59, 59, 59, 0.2);
+}

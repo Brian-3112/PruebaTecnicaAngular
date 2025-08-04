@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="divTitulo">
+
+    <app-modal-formulario-tareas [visible]="modalVisible" [titulo]="modoEdicion ? 'Editar Tarea' : 'Nueva Tarea'"
+      [tarea]="tareaActual" (cerrarModal)="cerrarModal()" (guardarModal)="guardarTarea($event)">
+    </app-modal-formulario-tareas>
+
+    <button pButton icon="pi pi-arrow-left" class="icon-button back-button" (click)="Regresar()"></button>
+
+    <h2 class="Titulo">TAREAS</h2>
+
+    <button (click)="abrirCrearTarea()" class="botonAgregar">Agregar Tarea</button>
+  </div>
+
+  <div class="tabla">
+    <table class="simple-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tarea of tareas">
+          <td>{{ tarea.id }}</td>
+          <td>{{ tarea.title }}</td>
+          <td>{{ tarea.completed }}</td>
+          <td>
+            <button class="icon-button lapiz" (click)="abrirEditarTarea(tarea)">
+              <i class="pi pi-pencil"></i>
+            </button>
+            <button class="icon-button x" (click)="EliminarTarea(tarea.id)">
+              <i class="pi pi-times"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

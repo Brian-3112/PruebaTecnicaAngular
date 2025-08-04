@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Knewave&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f2f2f2;
+    /* border: 2px solid rgb(218, 217, 217); */
+}
+
+.card {
+    width: 410px;
+    height: 480px;
+    padding: 1.9rem 1.2rem;
+    text-align: center;
+    background: #1a1a1a;
+    border-radius: 10px;
+    border: 2px solid #00ffff;
+    user-select: none;
+    /* border: 2px solid rgb(218, 217, 217); */
+}
+
+
+.title {
+    margin-top: 30px;
+    font-family: "Tourney", sans-serif;
+    font-size: 58px;
+    font-weight: 300;
+    color: #ffffff;
+    text-shadow: 1px 1px 9px #ffffff;
+    text-transform: uppercase;
+    /* border: 1px solid white; */
+}
+
+.divField {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    /* border: 1px solid white;w */
+}
+
+.field {
+    height: 55px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.5rem;
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    /* border: 2px solid rgb(217, 24, 24); */
+}
+
+.input-icon {
+    width: 1em;
+    color: #ffffff;
+    fill: #ffffff;
+    height: 100%;
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid rgb(66, 10, 205); */
+}
+
+.input-field {
+    background: transparent;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #ffffff;
+    padding: 0.5em 1em 0.5em 0;
+    caret-color: #ffffff;
+    margin-left: 10px;
+    /* border: 2px solid rgb(33, 213, 108); */
+}
+
+.field:has(.input-field:valid) {
+    border: 1px solid #ffffff;
+}
+
+
+.btn {
+    margin-top: 30px;
+    width: 133px;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    padding: 0.6em 1.2em;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: 700;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    /* border: 2px solid rgb(33, 213, 108); */
+}
+
+
+.field input:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    background-color: #a9a9a9;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+.divFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 0.2rem; 
+  padding: 1rem;
+}
+
+.registro-link {
+  display: inline-block;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+
+.registro-link:hover {
+  color: rgb(162, 162, 162);
+}
+
+

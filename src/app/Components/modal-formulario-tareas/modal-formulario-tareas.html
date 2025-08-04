@@ -1,0 +1,28 @@
+<div class="modal-backdrop" *ngIf="visible">
+  <div class="modal-card">
+    <h4 class="modal-title">{{ titulo }}</h4>
+
+    <form [formGroup]="form" (ngSubmit)="guardar()" class="formulario">
+      <label class="field">
+        <input formControlName="title" placeholder="Título de la tarea" class="input-field" type="text" />
+      </label>
+      <div *ngIf="form.get('title')?.invalid && form.get('title')?.touched" class="error">
+        El título es obligatorio
+      </div>
+
+      <label class="field checkbox-field">
+        <input type="checkbox" formControlName="completed" class="checkbox-input" />
+        <span class="check">¿Completada?</span>
+      </label>
+
+      <div *ngIf="form.get('completed')?.invalid && form.get('completed')?.touched" class="error">
+        El estado es obligatorio
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn cancelar" type="button" (click)="cerrar()">Cancelar</button>
+        <button class="btn guardar" type="submit" [disabled]="form.invalid">Guardar</button>
+      </div>
+    </form>
+  </div>
+</div>

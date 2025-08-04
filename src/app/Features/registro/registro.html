@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card">
+    <h4 class="Titulo">REGISTRO!</h4>
+
+    <form [formGroup]="form" (ngSubmit)="registrar()">
+      <div class="divField">
+
+        
+        <label class="field" for="logemail">
+          <input formControlName="username" id="logemail" placeholder="Correo" class="input-field" type="email"
+            autocomplete="off" />
+        </label>
+
+
+        <div *ngIf="form.get('username')?.invalid && form.get('username')?.touched" class="error">
+          <div *ngIf="form.get('username')?.errors?.['required']" class="error">El correo es obligatorio.</div>
+          <div *ngIf="form.get('username')?.errors?.['email']" class="error">Formato de correo inválido.</div>
+        </div>
+
+
+        <label class="field" for="logpass">
+          <input formControlName="password" id="logpass" placeholder="Contraseña" class="input-field" type="password" />
+        </label>
+
+        <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="error">
+          <div *ngIf="form.get('password')?.errors?.['required']" class="error">La contraseña es obligatoria.</div>
+          <div *ngIf="form.get('password')?.errors?.['minlength']" class="error">
+            Mínimo 6 caracteres.
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="divFooter">
+        <button class="btn" type="submit" [disabled]="form.invalid">GUARDAR</button>
+      </div>
+    </form>
+  </div>
+</div>
