@@ -2,7 +2,7 @@
 # PruebaTecnicaAngular
 
 ### 📌 Innclod.
-**Aplicación web que gestione "Proyectos y Tareas" utilizando Angular y una API 
+**Aplicación web que gestiona "Proyectos y Tareas" utilizando Angular y una API 
 pública**
 
 
